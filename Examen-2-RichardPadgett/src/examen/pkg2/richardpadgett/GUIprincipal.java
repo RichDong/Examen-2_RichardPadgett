@@ -5,7 +5,9 @@
  */
 package examen.pkg2.richardpadgett;
 
+import java.util.ArrayList;
 import javax.swing.DefaultListModel;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -118,6 +120,11 @@ public class GUIprincipal extends javax.swing.JFrame {
         rb_femenino.setText("Femenino");
 
         jb_guardarAstro.setText("Guardar Astronauta");
+        jb_guardarAstro.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_guardarAstroMouseClicked(evt);
+            }
+        });
 
         jLabel7.setText("Registrar Astronauta");
 
@@ -222,6 +229,11 @@ public class GUIprincipal extends javax.swing.JFrame {
         rb_no.setText("no");
 
         jb_registrarplaneta.setText("Registrar Planeta");
+        jb_registrarplaneta.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_registrarplanetaMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jd_PlanetasLayout = new javax.swing.GroupLayout(jd_Planetas.getContentPane());
         jd_Planetas.getContentPane().setLayout(jd_PlanetasLayout);
@@ -568,22 +580,77 @@ public class GUIprincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jb_planetasActionPerformed
 
     private void jb_astronautasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_astronautasMouseClicked
- 
+
         jd_astronautas.pack();
         jd_astronautas.setModal(true);
         jd_astronautas.setLocationRelativeTo(this);
         jd_astronautas.setVisible(true);
-        
+
     }//GEN-LAST:event_jb_astronautasMouseClicked
 
     private void jb_planetasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_planetasMouseClicked
-      jd_Planetas.pack();
-      jd_Planetas.setModal(true);
-      jd_Planetas.setLocationRelativeTo(this);
-      jd_Planetas.setVisible(true);
-        
-        
+        jd_Planetas.pack();
+        jd_Planetas.setModal(true);
+        jd_Planetas.setLocationRelativeTo(this);
+        jd_Planetas.setVisible(true);
+
+
     }//GEN-LAST:event_jb_planetasMouseClicked
+
+    private void jb_guardarAstroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_guardarAstroMouseClicked
+
+        if (rb_masculino.isSelected()) {
+
+            Astronautas a = new Astronautas(tf_nombre.getText(), tf_nacionalidad.getText(), Integer.parseInt(tf_sueldo.getText()), Integer.parseInt(tf_exp.getText()), "Masculino", Double.parseDouble(tf_peso.getText()));
+            DefaultTableModel modelot = (DefaultTableModel) jt_astronautas.getModel();
+            Object row[] = new Object[]{tf_nombre.getText(), tf_nacionalidad.getText(), Integer.parseInt(tf_sueldo.getText()), Integer.parseInt(tf_exp.getText()), "Masculino", Double.parseDouble(tf_peso.getText())};
+            modelot.addRow(row);
+            tf_nombre.setText("");
+            tf_nacionalidad.setText("");
+            tf_sueldo.setText("");
+            tf_exp.setText("");
+            tf_peso.setText("");
+
+        }
+        if (rb_femenino.isSelected()) {
+            Astronautas a = new Astronautas(tf_nombre.getText(), tf_nacionalidad.getText(), Integer.parseInt(tf_sueldo.getText()), Integer.parseInt(tf_exp.getText()), "Femenino", Double.parseDouble(tf_peso.getText()));
+            DefaultTableModel modelot = (DefaultTableModel) jt_astronautas.getModel();
+            Object row[] = new Object[]{tf_nombre.getText(), tf_nacionalidad.getText(), Integer.parseInt(tf_sueldo.getText()), Integer.parseInt(tf_exp.getText()), "Femenino", Double.parseDouble(tf_peso.getText())};
+            modelot.addRow(row);
+            tf_nombre.setText("");
+            tf_nacionalidad.setText("");
+            tf_sueldo.setText("");
+            tf_exp.setText("");
+            tf_peso.setText("");
+        }
+
+
+    }//GEN-LAST:event_jb_guardarAstroMouseClicked
+
+    private void jb_registrarplanetaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_registrarplanetaMouseClicked
+        if (rb_si.isSelected()) {
+            Planetas p = new Planetas(tf_nombrep.getText(), Double.parseDouble(tf_temp.getText()), tf_superficie.getText(), Double.parseDouble(tf_distancia.getText()), "Si");
+            DefaultTableModel modelop = (DefaultTableModel) jt_planetas.getModel();
+            Object row[] = new Object[]{tf_nombrep.getText(), Double.parseDouble(tf_temp.getText()), tf_superficie.getText(), Double.parseDouble(tf_distancia.getText()), "Si"};
+            modelop.addRow(row);
+            tf_nombrep.setText("");
+            tf_temp.setText("");
+            tf_superficie.setText("");
+            tf_distancia.setText("");
+        }
+        if (rb_no.isSelected()) {
+            Planetas p = new Planetas(tf_nombrep.getText(), Double.parseDouble(tf_temp.getText()), tf_superficie.getText(), Double.parseDouble(tf_distancia.getText()), "No");
+            DefaultTableModel modelop = (DefaultTableModel) jt_planetas.getModel();
+            Object row[] = new Object[]{tf_nombrep.getText(), Double.parseDouble(tf_temp.getText()), tf_superficie.getText(), Double.parseDouble(tf_distancia.getText()), "No"};
+            modelop.addRow(row);
+            tf_nombrep.setText("");
+            tf_temp.setText("");
+            tf_superficie.setText("");
+            tf_distancia.setText("");
+        }
+
+
+    }//GEN-LAST:event_jb_registrarplanetaMouseClicked
 
     /**
      * @param args the command line arguments
@@ -691,4 +758,7 @@ public class GUIprincipal extends javax.swing.JFrame {
     private javax.swing.JTextField tf_velocidad;
     private javax.swing.JTextField tf_velocidadt;
     // End of variables declaration//GEN-END:variables
+ArrayList<Naves> listanaves = new ArrayList();
+    ArrayList<Astronautas> listaastronautas = new ArrayList();
+
 }

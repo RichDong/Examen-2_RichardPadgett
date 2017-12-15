@@ -172,6 +172,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Guardar Astronauta"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jb_guardarAstroMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel7">
           <Properties>
@@ -324,6 +327,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Registrar Planeta"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jb_registrarplanetaMouseClicked"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
