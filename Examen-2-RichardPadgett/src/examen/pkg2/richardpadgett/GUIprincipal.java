@@ -94,6 +94,12 @@ public class GUIprincipal extends javax.swing.JFrame {
         jl_astronautas = new javax.swing.JList<>();
         cb_naves = new javax.swing.JComboBox<>();
         jb_agregarst = new javax.swing.JButton();
+        pp_astronautas = new javax.swing.JPopupMenu();
+        removerastronautas = new javax.swing.JMenuItem();
+        modificarastronautas = new javax.swing.JMenuItem();
+        pp_planetas = new javax.swing.JPopupMenu();
+        removerplanetas = new javax.swing.JMenuItem();
+        modificarplanetas = new javax.swing.JMenuItem();
         jb_planetas = new javax.swing.JButton();
         jb_astronautas = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -400,6 +406,11 @@ public class GUIprincipal extends javax.swing.JFrame {
         jLabel23.setText("Lugar de despeje");
 
         jb_guardarnavetripulada.setText("Guardar Nave Tripulada");
+        jb_guardarnavetripulada.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_guardarnavetripuladaMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jd_registrarnavestLayout = new javax.swing.GroupLayout(jd_registrarnavest.getContentPane());
         jd_registrarnavest.getContentPane().setLayout(jd_registrarnavestLayout);
@@ -486,6 +497,28 @@ public class GUIprincipal extends javax.swing.JFrame {
                 .addContainerGap(92, Short.MAX_VALUE))
         );
 
+        removerastronautas.setText("Remover Astronautas");
+        removerastronautas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removerastronautasActionPerformed(evt);
+            }
+        });
+        pp_astronautas.add(removerastronautas);
+
+        modificarastronautas.setText("Modificar Astronauta");
+        pp_astronautas.add(modificarastronautas);
+
+        removerplanetas.setText("jMenuItem1");
+        removerplanetas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removerplanetasActionPerformed(evt);
+            }
+        });
+        pp_planetas.add(removerplanetas);
+
+        modificarplanetas.setText("jMenuItem2");
+        pp_planetas.add(modificarplanetas);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jb_planetas.setText("Registrar Planetas");
@@ -523,6 +556,11 @@ public class GUIprincipal extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
+        jt_astronautas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jt_astronautasMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jt_astronautas);
 
         jt_planetas.setModel(new javax.swing.table.DefaultTableModel(
@@ -539,6 +577,11 @@ public class GUIprincipal extends javax.swing.JFrame {
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
+            }
+        });
+        jt_planetas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jt_planetasMouseClicked(evt);
             }
         });
         jScrollPane2.setViewportView(jt_planetas);
@@ -721,6 +764,37 @@ public class GUIprincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cb_planetassondasActionPerformed
 
+    private void jb_guardarnavetripuladaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_guardarnavetripuladaMouseClicked
+        listatrip.add(new Tripulada(tf_lugardespegue.getText(),Integer.parseInt(tf_numeroseriet.getText()), cb_planetastripuladas.getSelectedItem().toString(), Integer.parseInt(tf_velocidadt.getText())));
+        JOptionPane.showMessageDialog(jd_registrarnavest, "Nave Tripulada Creada");
+        
+        
+        
+    }//GEN-LAST:event_jb_guardarnavetripuladaMouseClicked
+
+    private void jt_astronautasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jt_astronautasMouseClicked
+        if (evt.isMetaDown()) {
+            pp_astronautas.show(jt_astronautas, evt.getX(), evt.getY());
+        }
+    }//GEN-LAST:event_jt_astronautasMouseClicked
+
+    private void removerastronautasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removerastronautasActionPerformed
+      DefaultTableModel modelor = (DefaultTableModel)jt_astronautas.getModel();
+      modelor.removeRow(jt_astronautas.getSelectedRow());
+        
+    }//GEN-LAST:event_removerastronautasActionPerformed
+
+    private void removerplanetasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removerplanetasActionPerformed
+        DefaultTableModel modelorem = (DefaultTableModel) jt_planetas.getModel();
+        modelorem.removeRow(jt_planetas.getSelectedRow());
+    }//GEN-LAST:event_removerplanetasActionPerformed
+
+    private void jt_planetasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jt_planetasMouseClicked
+        if (evt.isMetaDown()) {
+            pp_planetas.show(jt_planetas, evt.getX(), evt.getY());
+        }
+    }//GEN-LAST:event_jt_planetasMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -807,10 +881,16 @@ public class GUIprincipal extends javax.swing.JFrame {
     private javax.swing.JList<String> jl_astronautas;
     private javax.swing.JTable jt_astronautas;
     private javax.swing.JTable jt_planetas;
+    private javax.swing.JMenuItem modificarastronautas;
+    private javax.swing.JMenuItem modificarplanetas;
+    private javax.swing.JPopupMenu pp_astronautas;
+    private javax.swing.JPopupMenu pp_planetas;
     private javax.swing.JRadioButton rb_femenino;
     private javax.swing.JRadioButton rb_masculino;
     private javax.swing.JRadioButton rb_no;
     private javax.swing.JRadioButton rb_si;
+    private javax.swing.JMenuItem removerastronautas;
+    private javax.swing.JMenuItem removerplanetas;
     private javax.swing.JTextField tf_distancia;
     private javax.swing.JTextField tf_exp;
     private javax.swing.JTextField tf_lugardespegue;
