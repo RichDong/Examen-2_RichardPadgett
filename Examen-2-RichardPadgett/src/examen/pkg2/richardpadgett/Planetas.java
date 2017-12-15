@@ -7,12 +7,12 @@ public class Planetas {
     double temperaturamedia;
     String tiposuper;
     double distanciaT;
-    boolean anillos;
+    String anillos;
 
     public Planetas() {
     }
 
-    public Planetas(String nombre, double temperaturamedia, String tiposuper, double distanciaT, boolean anillos) {
+    public Planetas(String nombre, double temperaturamedia, String tiposuper, double distanciaT, String anillos) {
         this.nombre = nombre;
         this.temperaturamedia = temperaturamedia;
         this.tiposuper = tiposuper;
@@ -52,11 +52,11 @@ public class Planetas {
         this.distanciaT = distanciaT;
     }
 
-    public boolean isAnillos() {
+    public String isAnillos() {
         return anillos;
     }
 
-    public void setAnillos(boolean anillos) {
+    public void setAnillos(String anillos) {
         this.anillos = anillos;
     }
 

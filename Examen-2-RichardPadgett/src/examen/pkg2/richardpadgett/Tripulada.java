@@ -11,7 +11,8 @@ import java.util.ArrayList;
  *
  * @author richa
  */
-public class Tripulada extends Naves {
+public abstract class Tripulada extends Naves {
+
     String lugardedespegue;
     ArrayList<Astronautas> listastronautas = new ArrayList();
 
@@ -19,6 +20,11 @@ public class Tripulada extends Naves {
     }
 
     public Tripulada(String lugardedespegue) {
+        this.lugardedespegue = lugardedespegue;
+    }
+
+    public Tripulada(String lugardedespegue, int nserie, String destiny, double velocidad) {
+        super(nserie, destiny, velocidad);
         this.lugardedespegue = lugardedespegue;
     }
 
@@ -38,9 +44,31 @@ public class Tripulada extends Naves {
         this.listastronautas = listastronautas;
     }
 
-    @Override
-    public String toString() {
-        return "Tripulada{" + "lugardedespegue=" + lugardedespegue + ", listastronautas=" + listastronautas + '}';
+    public int getNserie() {
+        return nserie;
     }
+
+    public void setNserie(int nserie) {
+        this.nserie = nserie;
+    }
+
+    public String getDestiny() {
+        return destiny;
+    }
+
+    public void setDestiny(String destiny) {
+        this.destiny = destiny;
+    }
+
+    public double getVelocidad() {
+        return velocidad;
+    }
+
+    public void setVelocidad(double velocidad) {
+        this.velocidad = velocidad;
+    }
+
+    public abstract void calcularTiempo();
     
+
 }

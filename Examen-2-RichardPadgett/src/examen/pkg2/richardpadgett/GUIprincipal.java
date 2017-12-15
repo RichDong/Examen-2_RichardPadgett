@@ -27,21 +27,244 @@ public class GUIprincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jd_planetas = new javax.swing.JDialog();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        tf_nombre = new javax.swing.JTextField();
+        tf_nacionalidad = new javax.swing.JTextField();
+        tf_sueldo = new javax.swing.JTextField();
+        tf_exp = new javax.swing.JTextField();
+        rb_masculino = new javax.swing.JRadioButton();
+        rb_femenino = new javax.swing.JRadioButton();
+        tf_peso = new javax.swing.JTextField();
+        jb_guardarAstro = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        jd_astronautas = new javax.swing.JDialog();
+        bg_sexo = new javax.swing.ButtonGroup();
+        jb_planetas = new javax.swing.JButton();
+        jb_astronautas = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jt_astronautas = new javax.swing.JTable();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jt_planetas = new javax.swing.JTable();
+
+        jLabel1.setText("Nombres");
+
+        jLabel2.setText("Nacionalidad");
+
+        jLabel3.setText("Sueldo");
+
+        jLabel4.setText("Experiencia");
+
+        jLabel5.setText("Sexo");
+
+        jLabel6.setText("Peso");
+
+        bg_sexo.add(rb_masculino);
+        rb_masculino.setText("Masculiino");
+
+        bg_sexo.add(rb_femenino);
+        rb_femenino.setText("Femenino");
+
+        jb_guardarAstro.setText("Guardar Astronauta");
+
+        jLabel7.setText("Registrar Astronauta");
+
+        javax.swing.GroupLayout jd_planetasLayout = new javax.swing.GroupLayout(jd_planetas.getContentPane());
+        jd_planetas.getContentPane().setLayout(jd_planetasLayout);
+        jd_planetasLayout.setHorizontalGroup(
+            jd_planetasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_planetasLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jb_guardarAstro)
+                .addGap(45, 45, 45))
+            .addGroup(jd_planetasLayout.createSequentialGroup()
+                .addGroup(jd_planetasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_planetasLayout.createSequentialGroup()
+                        .addGap(52, 52, 52)
+                        .addGroup(jd_planetasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jd_planetasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(jd_planetasLayout.createSequentialGroup()
+                                    .addGroup(jd_planetasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel3)
+                                        .addComponent(jLabel2))
+                                    .addGap(28, 28, 28)
+                                    .addComponent(tf_nacionalidad, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(103, 103, 103))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jd_planetasLayout.createSequentialGroup()
+                                    .addGroup(jd_planetasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel5)
+                                        .addComponent(jLabel6))
+                                    .addGap(64, 64, 64)
+                                    .addGroup(jd_planetasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jd_planetasLayout.createSequentialGroup()
+                                            .addComponent(rb_masculino)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(rb_femenino))
+                                        .addComponent(tf_peso, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jd_planetasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(tf_sueldo, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jd_planetasLayout.createSequentialGroup()
+                                    .addGroup(jd_planetasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel4)
+                                        .addComponent(jLabel1))
+                                    .addGap(33, 33, 33)
+                                    .addGroup(jd_planetasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(tf_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(tf_exp, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                    .addGroup(jd_planetasLayout.createSequentialGroup()
+                        .addGap(220, 220, 220)
+                        .addComponent(jLabel7)))
+                .addContainerGap(171, Short.MAX_VALUE))
+        );
+        jd_planetasLayout.setVerticalGroup(
+            jd_planetasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_planetasLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jLabel7)
+                .addGap(38, 38, 38)
+                .addGroup(jd_planetasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(tf_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jd_planetasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(tf_nacionalidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jd_planetasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(tf_sueldo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jd_planetasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(tf_exp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jd_planetasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(rb_masculino)
+                    .addComponent(rb_femenino))
+                .addGap(18, 18, 18)
+                .addGroup(jd_planetasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(tf_peso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addComponent(jb_guardarAstro)
+                .addGap(24, 24, 24))
+        );
+
+        javax.swing.GroupLayout jd_astronautasLayout = new javax.swing.GroupLayout(jd_astronautas.getContentPane());
+        jd_astronautas.getContentPane().setLayout(jd_astronautasLayout);
+        jd_astronautasLayout.setHorizontalGroup(
+            jd_astronautasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jd_astronautasLayout.setVerticalGroup(
+            jd_astronautasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jb_planetas.setText("Registrar Planetas");
+        jb_planetas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_planetasActionPerformed(evt);
+            }
+        });
+
+        jb_astronautas.setText("Registrar Atronautas");
+        jb_astronautas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_astronautasMouseClicked(evt);
+            }
+        });
+
+        jt_astronautas.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Nombre", "Nacionalidad", "Sueldo", "Experiencia", "Sexo", "Peso"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Integer.class, java.lang.String.class, java.lang.Double.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(jt_astronautas);
+
+        jt_planetas.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Nombre", "Temperatura ", "Superficie", "Distancia de la tierra", "Anillos"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.Double.class, java.lang.String.class, java.lang.Double.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane2.setViewportView(jt_planetas);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jb_astronautas))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 561, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jb_planetas, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 109, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jb_astronautas))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jb_planetas))
+                .addContainerGap(77, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jb_planetasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_planetasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jb_planetasActionPerformed
+
+    private void jb_astronautasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_astronautasMouseClicked
+ 
+        jd_astronautas.pack();
+        jd_astronautas.setModal(true);
+        jd_astronautas.setLocationRelativeTo(this);
+        jd_astronautas.setVisible(true);
+        
+    }//GEN-LAST:event_jb_astronautasMouseClicked
 
     /**
      * @param args the command line arguments
@@ -79,5 +302,29 @@ public class GUIprincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup bg_sexo;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JButton jb_astronautas;
+    private javax.swing.JButton jb_guardarAstro;
+    private javax.swing.JButton jb_planetas;
+    private javax.swing.JDialog jd_astronautas;
+    private javax.swing.JDialog jd_planetas;
+    private javax.swing.JTable jt_astronautas;
+    private javax.swing.JTable jt_planetas;
+    private javax.swing.JRadioButton rb_femenino;
+    private javax.swing.JRadioButton rb_masculino;
+    private javax.swing.JTextField tf_exp;
+    private javax.swing.JTextField tf_nacionalidad;
+    private javax.swing.JTextField tf_nombre;
+    private javax.swing.JTextField tf_peso;
+    private javax.swing.JTextField tf_sueldo;
     // End of variables declaration//GEN-END:variables
 }

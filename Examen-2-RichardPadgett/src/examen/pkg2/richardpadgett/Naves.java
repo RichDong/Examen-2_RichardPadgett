@@ -39,7 +39,7 @@ public abstract class Naves {
     public void setVelocidad(double velocidad) {
         this.velocidad = velocidad;
     }
-
+   
     @Override
     public String toString() {
         return "Naves{" + "nserie=" + nserie + ", destiny=" + destiny + ", velocidad=" + velocidad + '}';

@@ -9,7 +9,7 @@ package examen.pkg2.richardpadgett;
  *
  * @author richa
  */
-public class Sondas extends Naves {
+public abstract class Sondas extends Naves {
     String materia;
     int peso;
 
@@ -20,6 +20,14 @@ public class Sondas extends Naves {
         this.materia = materia;
         this.peso = peso;
     }
+
+    public Sondas(String materia, int peso, int nserie, String destiny, double velocidad) {
+        super(nserie, destiny, velocidad);
+        this.materia = materia;
+        this.peso = peso;
+    }
+    
+    
 
     public String getMateria() {
         return materia;
@@ -36,6 +44,35 @@ public class Sondas extends Naves {
     public void setPeso(int peso) {
         this.peso = peso;
     }
+
+    public int getNserie() {
+        return nserie;
+    }
+
+    public void setNserie(int nserie) {
+        this.nserie = nserie;
+    }
+
+    public String getDestiny() {
+        return destiny;
+    }
+
+    public void setDestiny(String destiny) {
+        this.destiny = destiny;
+    }
+
+    public double getVelocidad() {
+        return velocidad;
+    }
+
+    public void setVelocidad(double velocidad) {
+        this.velocidad = velocidad;
+    }
+    public abstract void calcularTiempo();
+        
+    
+
+    
 
     @Override
     public String toString() {
