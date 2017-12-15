@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author richa
  */
-public abstract class Tripulada extends Naves {
+public class Tripulada extends Naves {
 
     String lugardedespegue;
     ArrayList<Astronautas> listastronautas = new ArrayList();
@@ -68,7 +68,12 @@ public abstract class Tripulada extends Naves {
         this.velocidad = velocidad;
     }
 
-    public abstract void calcularTiempo();
+    @Override
+    public void calcularTiempo() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
     
 
 }

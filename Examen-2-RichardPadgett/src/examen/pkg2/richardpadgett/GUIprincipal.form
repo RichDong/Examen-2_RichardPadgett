@@ -352,7 +352,7 @@
                               <Group type="102" attributes="0">
                                   <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="tf_numeroserie" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <Component id="tf_numeroseriesonda" min="-2" pref="61" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -363,10 +363,10 @@
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="cb_planetas" min="-2" max="-2" attributes="0"/>
+                                      <Component id="cb_planetassondas" min="-2" max="-2" attributes="0"/>
                                       <Component id="tf_material" max="32767" attributes="0"/>
-                                      <Component id="tf_pesoo" max="32767" attributes="0"/>
-                                      <Component id="tf_velocidad" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="tf_pesosondas" max="32767" attributes="0"/>
+                                      <Component id="tf_velocidadsonda" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -389,17 +389,17 @@
                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="tf_numeroserie" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tf_numeroseriesonda" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="cb_planetas" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cb_planetassondas" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="tf_velocidad" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tf_velocidadsonda" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -409,7 +409,7 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel20" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="tf_pesoo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tf_pesosondas" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="56" max="32767" attributes="0"/>
                   <Component id="jb_guardarsonda" min="-2" max="-2" attributes="0"/>
@@ -434,12 +434,15 @@
             <Property name="text" type="java.lang.String" value="Planeta Destino"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="cb_planetas">
+        <Component class="javax.swing.JComboBox" name="cb_planetassondas">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="0"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cb_planetassondasActionPerformed"/>
+          </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
@@ -449,9 +452,9 @@
             <Property name="text" type="java.lang.String" value="Velocidad"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="tf_velocidad">
+        <Component class="javax.swing.JTextField" name="tf_velocidadsonda">
         </Component>
-        <Component class="javax.swing.JTextField" name="tf_numeroserie">
+        <Component class="javax.swing.JTextField" name="tf_numeroseriesonda">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel19">
           <Properties>
@@ -465,12 +468,15 @@
         </Component>
         <Component class="javax.swing.JTextField" name="tf_material">
         </Component>
-        <Component class="javax.swing.JTextField" name="tf_pesoo">
+        <Component class="javax.swing.JTextField" name="tf_pesosondas">
         </Component>
         <Component class="javax.swing.JButton" name="jb_guardarsonda">
           <Properties>
             <Property name="text" type="java.lang.String" value="Guardar Sonda"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jb_guardarsondaMouseClicked"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -501,7 +507,7 @@
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="cb_planetast" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="cb_planetastripuladas" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="tf_velocidadt" alignment="0" min="-2" pref="28" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -526,7 +532,7 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel21" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="cb_planetast" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cb_planetastripuladas" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -556,7 +562,7 @@
             <Property name="text" type="java.lang.String" value="Planeta Destino"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="cb_planetast">
+        <Component class="javax.swing.JComboBox" name="cb_planetastripuladas">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="0"/>
@@ -689,8 +695,9 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jb_astronautas" min="-2" max="-2" attributes="0"/>
-                          <Component id="jb_naves" min="-2" pref="125" max="-2" attributes="0"/>
-                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jb_agregarastronautasanaves" min="-2" max="-2" attributes="0"/>
+                          <Component id="jb_crearsondas" alignment="0" min="-2" pref="125" max="-2" attributes="0"/>
+                          <Component id="jb_crearnavestripuladas" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" attributes="0">
@@ -699,7 +706,7 @@
                       <Component id="jb_planetas" min="-2" pref="133" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="0" pref="109" max="32767" attributes="0"/>
+              <EmptySpace pref="109" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -708,13 +715,15 @@
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPane1" min="-2" pref="210" max="-2" attributes="0"/>
-                  <Group type="102" attributes="0">
+                  <Component id="jScrollPane1" alignment="0" min="-2" pref="210" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
                       <Component id="jb_astronautas" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="jb_naves" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jb_crearsondas" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                      <Component id="jb_crearnavestripuladas" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jb_agregarastronautasanaves" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -817,15 +826,26 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="jb_naves">
+    <Component class="javax.swing.JButton" name="jb_crearsondas">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Crear Naves"/>
+        <Property name="text" type="java.lang.String" value="Crear Sondas"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jb_crearsondasMouseClicked"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="jb_agregarastronautasanaves">
       <Properties>
         <Property name="text" type="java.lang.String" value="Agregar Astronautas a Naves"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jb_crearnavestripuladas">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Crear Naves Tripuladas"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jb_crearnavestripuladasMouseClicked"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

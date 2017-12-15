@@ -9,7 +9,7 @@ package examen.pkg2.richardpadgett;
  *
  * @author richa
  */
-public abstract class Sondas extends Naves {
+public class Sondas extends Naves {
     String materia;
     int peso;
 
@@ -67,9 +67,7 @@ public abstract class Sondas extends Naves {
 
     public void setVelocidad(double velocidad) {
         this.velocidad = velocidad;
-    }
-    public abstract void calcularTiempo();
-        
+    }    
     
 
     
@@ -77,6 +75,11 @@ public abstract class Sondas extends Naves {
     @Override
     public String toString() {
         return "Sondas{" + "materia=" + materia + ", peso=" + peso + '}';
+    }
+
+    @Override
+    public void calcularTiempo() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

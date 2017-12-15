@@ -39,6 +39,8 @@ public abstract class Naves {
     public void setVelocidad(double velocidad) {
         this.velocidad = velocidad;
     }
+    public abstract void calcularTiempo();
+       
    
     @Override
     public String toString() {
