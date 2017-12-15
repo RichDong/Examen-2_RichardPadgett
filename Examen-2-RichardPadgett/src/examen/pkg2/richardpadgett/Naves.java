@@ -44,7 +44,7 @@ public abstract class Naves {
    
     @Override
     public String toString() {
-        return "Naves{" + "nserie=" + nserie + ", destiny=" + destiny + ", velocidad=" + velocidad + '}';
+        return"Numero de serie: " + nserie ;
     }
     
     

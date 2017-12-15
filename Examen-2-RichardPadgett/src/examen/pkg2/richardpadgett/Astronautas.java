@@ -72,7 +72,7 @@ public class Astronautas {
 
     @Override
     public String toString() {
-        return "Nombre: " + nombre + "Nacionalidad: " + nacionalidad + "Sueldo: " + sueldo + "Experiencia: " + experiencia + "Sexo: " + sexo + "Peso: " + peso;
+        return nombre ;
     }
  
 }

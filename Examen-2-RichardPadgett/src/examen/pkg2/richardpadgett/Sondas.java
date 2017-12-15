@@ -74,7 +74,7 @@ public class Sondas extends Naves {
 
     @Override
     public String toString() {
-        return "Sondas{" + "materia=" + materia + ", peso=" + peso + '}';
+        return "materia': " + materia + "peso: " + peso;
     }
 
     @Override

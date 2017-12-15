@@ -92,8 +92,9 @@ public class GUIprincipal extends javax.swing.JFrame {
         jd_agregarastronautas = new javax.swing.JDialog();
         jScrollPane3 = new javax.swing.JScrollPane();
         jl_astronautas = new javax.swing.JList<>();
-        cb_naves = new javax.swing.JComboBox<>();
+        cb_navesagregar = new javax.swing.JComboBox<>();
         jb_agregarst = new javax.swing.JButton();
+        jLabel24 = new javax.swing.JLabel();
         pp_astronautas = new javax.swing.JPopupMenu();
         removerastronautas = new javax.swing.JMenuItem();
         modificarastronautas = new javax.swing.JMenuItem();
@@ -472,29 +473,41 @@ public class GUIprincipal extends javax.swing.JFrame {
 
         jb_agregarst.setText("Agregar astronauta");
 
+        jLabel24.setText("Astronautas");
+
         javax.swing.GroupLayout jd_agregarastronautasLayout = new javax.swing.GroupLayout(jd_agregarastronautas.getContentPane());
         jd_agregarastronautas.getContentPane().setLayout(jd_agregarastronautasLayout);
         jd_agregarastronautasLayout.setHorizontalGroup(
             jd_agregarastronautasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_agregarastronautasLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jb_agregarst)
+                .addGap(114, 114, 114))
             .addGroup(jd_agregarastronautasLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(jd_agregarastronautasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jb_agregarst)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(46, 46, 46)
-                .addComponent(cb_naves, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(77, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(jd_agregarastronautasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_agregarastronautasLayout.createSequentialGroup()
+                        .addComponent(jLabel24)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_agregarastronautasLayout.createSequentialGroup()
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                        .addComponent(cb_navesagregar, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(46, 46, 46))))
         );
         jd_agregarastronautasLayout.setVerticalGroup(
             jd_agregarastronautasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jd_agregarastronautasLayout.createSequentialGroup()
-                .addGap(19, 19, 19)
+                .addContainerGap(52, Short.MAX_VALUE)
+                .addComponent(jLabel24)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jd_agregarastronautasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cb_naves, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addComponent(jb_agregarst)
-                .addContainerGap(92, Short.MAX_VALUE))
+                    .addGroup(jd_agregarastronautasLayout.createSequentialGroup()
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jb_agregarst))
+                    .addComponent(cb_navesagregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(46, 46, 46))
         );
 
         removerastronautas.setText("Remover Astronautas");
@@ -594,6 +607,11 @@ public class GUIprincipal extends javax.swing.JFrame {
         });
 
         jb_agregarastronautasanaves.setText("Agregar Astronautas a Naves");
+        jb_agregarastronautasanaves.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_agregarastronautasanavesMouseClicked(evt);
+            }
+        });
 
         jb_crearnavestripuladas.setText("Crear Naves Tripuladas");
         jb_crearnavestripuladas.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -682,6 +700,9 @@ public class GUIprincipal extends javax.swing.JFrame {
             tf_sueldo.setText("");
             tf_exp.setText("");
             tf_peso.setText("");
+            DefaultListModel modelolista = (DefaultListModel) jl_astronautas.getModel();
+            modelolista.addElement(a);
+            jl_astronautas.setModel(modelolista);
 
         }
         if (rb_femenino.isSelected()) {
@@ -694,6 +715,9 @@ public class GUIprincipal extends javax.swing.JFrame {
             tf_sueldo.setText("");
             tf_exp.setText("");
             tf_peso.setText("");
+            DefaultListModel modelolista = (DefaultListModel) jl_astronautas.getModel();
+            modelolista.addElement(a);
+            jl_astronautas.setModel(modelolista);
         }
 
 
@@ -765,11 +789,12 @@ public class GUIprincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_cb_planetassondasActionPerformed
 
     private void jb_guardarnavetripuladaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_guardarnavetripuladaMouseClicked
-        listatrip.add(new Tripulada(tf_lugardespegue.getText(),Integer.parseInt(tf_numeroseriet.getText()), cb_planetastripuladas.getSelectedItem().toString(), Integer.parseInt(tf_velocidadt.getText())));
+        listatrip.add(new Tripulada(tf_lugardespegue.getText(), Integer.parseInt(tf_numeroseriet.getText()), cb_planetastripuladas.getSelectedItem().toString(), Integer.parseInt(tf_velocidadt.getText())));
         JOptionPane.showMessageDialog(jd_registrarnavest, "Nave Tripulada Creada");
-        
-        
-        
+        Tripulada a = new Tripulada(tf_lugardespegue.getText(), Integer.parseInt(tf_numeroseriet.getText()), cb_planetastripuladas.getSelectedItem().toString(), Integer.parseInt(tf_velocidadt.getText()));
+        DefaultComboBoxModel modeloag = (DefaultComboBoxModel) cb_navesagregar.getModel();
+        modeloag.addElement(a);
+        cb_navesagregar.setModel(modeloag);
     }//GEN-LAST:event_jb_guardarnavetripuladaMouseClicked
 
     private void jt_astronautasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jt_astronautasMouseClicked
@@ -779,9 +804,9 @@ public class GUIprincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jt_astronautasMouseClicked
 
     private void removerastronautasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removerastronautasActionPerformed
-      DefaultTableModel modelor = (DefaultTableModel)jt_astronautas.getModel();
-      modelor.removeRow(jt_astronautas.getSelectedRow());
-        
+        DefaultTableModel modelor = (DefaultTableModel) jt_astronautas.getModel();
+        modelor.removeRow(jt_astronautas.getSelectedRow());
+
     }//GEN-LAST:event_removerastronautasActionPerformed
 
     private void removerplanetasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removerplanetasActionPerformed
@@ -794,6 +819,17 @@ public class GUIprincipal extends javax.swing.JFrame {
             pp_planetas.show(jt_planetas, evt.getX(), evt.getY());
         }
     }//GEN-LAST:event_jt_planetasMouseClicked
+
+    private void jb_agregarastronautasanavesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_agregarastronautasanavesMouseClicked
+       jd_agregarastronautas.setModal(true);
+       jd_agregarastronautas.pack();
+       jd_agregarastronautas.setLocationRelativeTo(this);
+       jd_agregarastronautas.setVisible(true);
+        
+        
+        
+        
+    }//GEN-LAST:event_jb_agregarastronautasanavesMouseClicked
 
     /**
      * @param args the command line arguments
@@ -834,7 +870,7 @@ public class GUIprincipal extends javax.swing.JFrame {
     private javax.swing.ButtonGroup bg_anillos;
     private javax.swing.ButtonGroup bg_sexo;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JComboBox<String> cb_naves;
+    private javax.swing.JComboBox<String> cb_navesagregar;
     private javax.swing.JComboBox<String> cb_planetassondas;
     private javax.swing.JComboBox<String> cb_planetastripuladas;
     private javax.swing.JLabel jLabel1;
@@ -853,6 +889,7 @@ public class GUIprincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
