@@ -1092,12 +1092,6 @@ public class GUIprincipal extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(Tiempo,"Tiempo de Ida: "+ ((Naves)mods.getElementAt(jl_tripuladastiempo.getSelectedIndex())).calcularTiempo()[0]);
         JOptionPane.showMessageDialog(Tiempo,"Tiempo de Regreso: "+((Naves)mods.getElementAt(jl_tripuladastiempo.getSelectedIndex())).calcularTiempo()[1]);
         
-        
-        
-        
-        
-        
-        
     }//GEN-LAST:event_jb_tiempotripMouseClicked
 
     private void jb_tiemposondasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_tiemposondasMouseClicked
@@ -1105,13 +1099,7 @@ public class GUIprincipal extends javax.swing.JFrame {
         mods.getElementAt(jl_sondastiempo.getSelectedIndex());
         JOptionPane.showMessageDialog(Tiempo,"Tiempo de Ida: "+ ((Naves)mods.getElementAt(jl_sondastiempo.getSelectedIndex())).calcularTiempo()[0]);
         JOptionPane.showMessageDialog(Tiempo,"Tiempo de Regreso: "+((Naves)mods.getElementAt(jl_sondastiempo.getSelectedIndex())).calcularTiempo()[1]);
-        
-        
-        
-        
-        
-        
-        
+           
     }//GEN-LAST:event_jb_tiemposondasMouseClicked
 
     /**
