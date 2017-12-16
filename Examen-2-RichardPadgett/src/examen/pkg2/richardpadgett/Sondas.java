@@ -21,7 +21,7 @@ public class Sondas extends Naves {
         this.peso = peso;
     }
 
-    public Sondas(String materia, int peso, int nserie, String destiny, double velocidad) {
+    public Sondas(String materia, int peso, int nserie, Planetas destiny, double velocidad) {
         super(nserie, destiny, velocidad);
         this.materia = materia;
         this.peso = peso;
@@ -53,11 +53,11 @@ public class Sondas extends Naves {
         this.nserie = nserie;
     }
 
-    public String getDestiny() {
+    public Planetas  getDestiny() {
         return destiny;
     }
 
-    public void setDestiny(String destiny) {
+    public void setDestiny(Planetas  destiny) {
         this.destiny = destiny;
     }
 
@@ -68,18 +68,24 @@ public class Sondas extends Naves {
     public void setVelocidad(double velocidad) {
         this.velocidad = velocidad;
     }    
-    
-
-    
 
     @Override
     public String toString() {
-        return "materia': " + materia + "peso: " + peso;
+        return "Materia: " + materia + "Numero de Serie: "+nserie;
     }
-
-    @Override
-    public void calcularTiempo() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    
+     public double[] calcularTiempo() {
+        double tida;
+        double tvuelta;
+        double[] conjunto=null;
+        double suma = 0;
+        
+        tida = destiny.getDistanciaT()/super.getVelocidad();
+        tvuelta = 9.8*super.getVelocidad();
+        
+        conjunto[0]=tida;
+        conjunto[1]=tvuelta;
+        return conjunto;
     }
     
 }

@@ -65,7 +65,7 @@ public class GUIprincipal extends javax.swing.JFrame {
         tf_distancia = new javax.swing.JTextField();
         jb_registrarplaneta = new javax.swing.JButton();
         bg_anillos = new javax.swing.ButtonGroup();
-        jd_sondas = new javax.swing.JDialog();
+        jd_crearsondas = new javax.swing.JDialog();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
@@ -116,6 +116,13 @@ public class GUIprincipal extends javax.swing.JFrame {
         rd_modsueldo = new javax.swing.JTextField();
         tf_modexp = new javax.swing.JTextField();
         bg_modsexo = new javax.swing.ButtonGroup();
+        Tiempo = new javax.swing.JDialog();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jl_sondastiempo = new javax.swing.JList<>();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jl_tripuladastiempo = new javax.swing.JList<>();
+        jb_tiempotrip = new javax.swing.JButton();
+        jb_tiemposondas = new javax.swing.JButton();
         jb_planetas = new javax.swing.JButton();
         jb_astronautas = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -125,6 +132,7 @@ public class GUIprincipal extends javax.swing.JFrame {
         jb_crearsondas = new javax.swing.JButton();
         jb_agregarastronautasanaves = new javax.swing.JButton();
         jb_crearnavestripuladas = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         jLabel1.setText("Nombres");
 
@@ -349,63 +357,63 @@ public class GUIprincipal extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jd_sondasLayout = new javax.swing.GroupLayout(jd_sondas.getContentPane());
-        jd_sondas.getContentPane().setLayout(jd_sondasLayout);
-        jd_sondasLayout.setHorizontalGroup(
-            jd_sondasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_sondasLayout.createSequentialGroup()
-                .addGroup(jd_sondasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jd_sondasLayout.createSequentialGroup()
+        javax.swing.GroupLayout jd_crearsondasLayout = new javax.swing.GroupLayout(jd_crearsondas.getContentPane());
+        jd_crearsondas.getContentPane().setLayout(jd_crearsondasLayout);
+        jd_crearsondasLayout.setHorizontalGroup(
+            jd_crearsondasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_crearsondasLayout.createSequentialGroup()
+                .addGroup(jd_crearsondasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_crearsondasLayout.createSequentialGroup()
                         .addGap(229, 229, 229)
                         .addComponent(jLabel14))
-                    .addGroup(jd_sondasLayout.createSequentialGroup()
+                    .addGroup(jd_crearsondasLayout.createSequentialGroup()
                         .addGap(51, 51, 51)
-                        .addGroup(jd_sondasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jd_sondasLayout.createSequentialGroup()
+                        .addGroup(jd_crearsondasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jd_crearsondasLayout.createSequentialGroup()
                                 .addComponent(jLabel15)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(tf_numeroseriesonda, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jd_sondasLayout.createSequentialGroup()
-                                .addGroup(jd_sondasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jd_crearsondasLayout.createSequentialGroup()
+                                .addGroup(jd_crearsondasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel16)
                                     .addComponent(jLabel17)
                                     .addComponent(jLabel19)
                                     .addComponent(jLabel20))
                                 .addGap(18, 18, 18)
-                                .addGroup(jd_sondasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(jd_crearsondasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(cb_planetassondas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(tf_material)
                                     .addComponent(tf_pesosondas)
                                     .addComponent(tf_velocidadsonda))))))
                 .addContainerGap(224, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_sondasLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_crearsondasLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jb_guardarsonda)
                 .addGap(55, 55, 55))
         );
-        jd_sondasLayout.setVerticalGroup(
-            jd_sondasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_sondasLayout.createSequentialGroup()
+        jd_crearsondasLayout.setVerticalGroup(
+            jd_crearsondasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_crearsondasLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel14)
                 .addGap(33, 33, 33)
-                .addGroup(jd_sondasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jd_crearsondasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel15)
                     .addComponent(tf_numeroseriesonda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jd_sondasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jd_crearsondasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel16)
                     .addComponent(cb_planetassondas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(23, 23, 23)
-                .addGroup(jd_sondasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jd_crearsondasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel17)
                     .addComponent(tf_velocidadsonda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jd_sondasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jd_crearsondasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel19)
                     .addComponent(tf_material, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jd_sondasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jd_crearsondasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel20)
                     .addComponent(tf_pesosondas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
@@ -661,6 +669,57 @@ public class GUIprincipal extends javax.swing.JFrame {
                     .addContainerGap(169, Short.MAX_VALUE)))
         );
 
+        jl_sondastiempo.setModel(new DefaultListModel());
+        jScrollPane4.setViewportView(jl_sondastiempo);
+
+        jl_tripuladastiempo.setModel(new DefaultListModel());
+        jScrollPane5.setViewportView(jl_tripuladastiempo);
+
+        jb_tiempotrip.setText("Datos de Naves Tripuladas");
+        jb_tiempotrip.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_tiempotripMouseClicked(evt);
+            }
+        });
+
+        jb_tiemposondas.setText("Datos Sondas");
+        jb_tiemposondas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_tiemposondasMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout TiempoLayout = new javax.swing.GroupLayout(Tiempo.getContentPane());
+        Tiempo.getContentPane().setLayout(TiempoLayout);
+        TiempoLayout.setHorizontalGroup(
+            TiempoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(TiempoLayout.createSequentialGroup()
+                .addGap(57, 57, 57)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(119, 119, 119)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(90, Short.MAX_VALUE))
+            .addGroup(TiempoLayout.createSequentialGroup()
+                .addGap(109, 109, 109)
+                .addComponent(jb_tiemposondas)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jb_tiempotrip)
+                .addGap(115, 115, 115))
+        );
+        TiempoLayout.setVerticalGroup(
+            TiempoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(TiempoLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(TiempoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
+                    .addComponent(jScrollPane4))
+                .addGap(18, 18, 18)
+                .addGroup(TiempoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jb_tiemposondas)
+                    .addComponent(jb_tiempotrip))
+                .addContainerGap(118, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jb_planetas.setText("Registrar Planetas");
@@ -748,6 +807,18 @@ public class GUIprincipal extends javax.swing.JFrame {
                 jb_crearnavestripuladasMouseClicked(evt);
             }
         });
+        jb_crearnavestripuladas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_crearnavestripuladasActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("Tiempos de Ida y Regeso");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -769,6 +840,10 @@ public class GUIprincipal extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jb_planetas, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(109, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(352, 352, 352))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -788,7 +863,9 @@ public class GUIprincipal extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jb_planetas))
-                .addContainerGap(77, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(26, 26, 26))
         );
 
         pack();
@@ -893,10 +970,10 @@ public class GUIprincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jb_registrarplanetaMouseClicked
 
     private void jb_crearsondasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_crearsondasMouseClicked
-        jd_sondas.pack();
-        jd_sondas.setModal(true);
-        jd_sondas.setLocationRelativeTo(this);
-        jd_sondas.setVisible(true);
+        jd_crearsondas.pack();
+        jd_crearsondas.setModal(true);
+        jd_crearsondas.setLocationRelativeTo(this);
+        jd_crearsondas.setVisible(true);
 
     }//GEN-LAST:event_jb_crearsondasMouseClicked
 
@@ -910,8 +987,13 @@ public class GUIprincipal extends javax.swing.JFrame {
 
     private void jb_guardarsondaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_guardarsondaMouseClicked
         Sondas sonda = new Sondas();
-        listasondas.add(new Sondas(tf_material.getText(), Integer.parseInt(tf_pesosondas.getText()), Integer.parseInt(tf_numeroseriesonda.getText()), cb_planetassondas.getSelectedItem().toString(), Double.parseDouble(tf_velocidadsonda.getText())));
-        JOptionPane.showMessageDialog(jd_sondas, "Sonda Creada");
+        listasondas.add(new Sondas(tf_material.getText(), Integer.parseInt(tf_pesosondas.getText()), Integer.parseInt(tf_numeroseriesonda.getText()), (Planetas) cb_planetassondas.getSelectedItem(), Double.parseDouble(tf_velocidadsonda.getText())));
+        Sondas a = new Sondas(tf_material.getText(), Integer.parseInt(tf_pesosondas.getText()), Integer.parseInt(tf_numeroseriesonda.getText()), (Planetas) cb_planetassondas.getSelectedItem(), Double.parseDouble(tf_velocidadsonda.getText()));
+        JOptionPane.showMessageDialog(jd_crearsondas, "Sonda Creada");
+        DefaultListModel mod = (DefaultListModel) jl_sondastiempo.getModel();
+        mod.addElement(a);
+        jl_sondastiempo.setModel(mod);
+
 
     }//GEN-LAST:event_jb_guardarsondaMouseClicked
 
@@ -920,12 +1002,17 @@ public class GUIprincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_cb_planetassondasActionPerformed
 
     private void jb_guardarnavetripuladaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_guardarnavetripuladaMouseClicked
-        listatrip.add(new Tripulada(tf_lugardespegue.getText(), Integer.parseInt(tf_numeroseriet.getText()), cb_planetastripuladas.getSelectedItem().toString(), Integer.parseInt(tf_velocidadt.getText())));
+        listatrip.add(new Tripulada(tf_lugardespegue.getText(), Integer.parseInt(tf_numeroseriet.getText()), (Planetas) cb_planetastripuladas.getSelectedItem(), Integer.parseInt(tf_velocidadt.getText())));
         JOptionPane.showMessageDialog(jd_registrarnavest, "Nave Tripulada Creada");
-        Tripulada a = new Tripulada(tf_lugardespegue.getText(), Integer.parseInt(tf_numeroseriet.getText()), cb_planetastripuladas.getSelectedItem().toString(), Integer.parseInt(tf_velocidadt.getText()));
+        Tripulada a = new Tripulada(tf_lugardespegue.getText(), Integer.parseInt(tf_numeroseriet.getText()), (Planetas) cb_planetastripuladas.getSelectedItem(), Integer.parseInt(tf_velocidadt.getText()));
         DefaultComboBoxModel modeloag = (DefaultComboBoxModel) cb_navesagregar.getModel();
         modeloag.addElement(a);
         cb_navesagregar.setModel(modeloag);
+        DefaultListModel mod = (DefaultListModel) jl_tripuladastiempo.getModel();
+        mod.addElement(a);
+        jl_tripuladastiempo.setModel(mod);
+
+
     }//GEN-LAST:event_jb_guardarnavetripuladaMouseClicked
 
     private void jt_astronautasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jt_astronautasMouseClicked
@@ -938,7 +1025,7 @@ public class GUIprincipal extends javax.swing.JFrame {
         DefaultTableModel modelor = (DefaultTableModel) jt_astronautas.getModel();
         DefaultListModel modelot = (DefaultListModel) jl_astronautas.getModel();
         int b = jt_astronautas.getSelectedRow();
-        
+
         modelot.remove(b);
         modelor.removeRow(jt_astronautas.getSelectedRow());
 
@@ -988,6 +1075,42 @@ public class GUIprincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jb_modAstroMouseClicked
 
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        Tiempo.pack();
+        Tiempo.setModal(true);
+        Tiempo.setLocationRelativeTo(this);
+        Tiempo.setVisible(true);
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jb_crearnavestripuladasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_crearnavestripuladasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jb_crearnavestripuladasActionPerformed
+
+    private void jb_tiempotripMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_tiempotripMouseClicked
+       
+        
+        
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_jb_tiempotripMouseClicked
+
+    private void jb_tiemposondasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_tiemposondasMouseClicked
+        DefaultListModel mods = (DefaultListModel)jl_sondastiempo.getModel();
+        mods.getElementAt(jl_sondastiempo.getSelectedIndex());
+        JOptionPane.showMessageDialog(Tiempo,"Tiempo de Ida: " ((Naves)mods.getElementAt(jl_sondastiempo.getSelectedIndex())).calcularTiempo()[0]);
+        JOptionPane.showMessageDialog(Tiempo,"Tiempo de Regreso: "+((Naves)mods.getElementAt(jl_sondastiempo.getSelectedIndex())).calcularTiempo()[1]);
+        
+        
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_jb_tiemposondasMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1024,12 +1147,14 @@ public class GUIprincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JDialog Tiempo;
     private javax.swing.ButtonGroup bg_anillos;
     private javax.swing.ButtonGroup bg_modsexo;
     private javax.swing.ButtonGroup bg_sexo;
     private javax.swing.JComboBox<String> cb_navesagregar;
     private javax.swing.JComboBox<String> cb_planetassondas;
     private javax.swing.JComboBox<String> cb_planetastripuladas;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1063,6 +1188,8 @@ public class GUIprincipal extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JButton jb_agregarastronautasanaves;
     private javax.swing.JButton jb_agregarst;
     private javax.swing.JButton jb_astronautas;
@@ -1074,13 +1201,17 @@ public class GUIprincipal extends javax.swing.JFrame {
     private javax.swing.JButton jb_modAstro;
     private javax.swing.JButton jb_planetas;
     private javax.swing.JButton jb_registrarplaneta;
+    private javax.swing.JButton jb_tiemposondas;
+    private javax.swing.JButton jb_tiempotrip;
     private javax.swing.JDialog jd_Planetas;
     private javax.swing.JDialog jd_agregarastronautas;
     private javax.swing.JDialog jd_astronautas;
+    private javax.swing.JDialog jd_crearsondas;
     private javax.swing.JDialog jd_modificarastronautas;
     private javax.swing.JDialog jd_registrarnavest;
-    private javax.swing.JDialog jd_sondas;
     private javax.swing.JList<String> jl_astronautas;
+    private javax.swing.JList<String> jl_sondastiempo;
+    private javax.swing.JList<String> jl_tripuladastiempo;
     private javax.swing.JTable jt_astronautas;
     private javax.swing.JTable jt_planetas;
     private javax.swing.JMenuItem modificarastronautas;

@@ -23,7 +23,7 @@ public class Tripulada extends Naves {
         this.lugardedespegue = lugardedespegue;
     }
 
-    public Tripulada(String lugardedespegue, int nserie, String destiny, double velocidad) {
+    public Tripulada(String lugardedespegue, int nserie, Planetas destiny, double velocidad) {
         super(nserie, destiny, velocidad);
         this.lugardedespegue = lugardedespegue;
     }
@@ -52,11 +52,11 @@ public class Tripulada extends Naves {
         this.nserie = nserie;
     }
 
-    public String getDestiny() {
+    public Planetas getDestiny() {
         return destiny;
     }
 
-    public void setDestiny(String destiny) {
+    public void setDestiny(Planetas destiny) {
         this.destiny = destiny;
     }
 
@@ -68,12 +68,21 @@ public class Tripulada extends Naves {
         this.velocidad = velocidad;
     }
 
-    @Override
-    public void calcularTiempo() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public double[] calcularTiempo() {
+        double tida;
+        double tvuelta;
+        double[] conjunto=null;
+        double suma = 0;
+        for (int i = 0; i < listastronautas.size(); i++) {
+           suma+= listastronautas.get(i).getPeso();
+        }
+        tida = destiny.getDistanciaT()/super.getVelocidad()*suma*suma/100;
+        tvuelta = destiny.getDistanciaT()/super.getVelocidad()*suma/100;
+        
+        conjunto[0]=tida;
+        conjunto[1]=tvuelta;
+        return conjunto;
     }
 
-    
-    
 
 }
