@@ -44,7 +44,7 @@ public abstract class Naves {
    
     @Override
     public String toString() {
-        return"Numero de serie: " + nserie ;
+        return"NS:" + nserie ;
     }
     
     

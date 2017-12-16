@@ -77,7 +77,7 @@ public class Sondas extends Naves {
      public double[] calcularTiempo() {
         double tida;
         double tvuelta;
-        double[] conjunto=null;
+        double[] conjunto= new double[2];
         double suma = 0;
         
         tida = destiny.getDistanciaT()/super.getVelocidad();

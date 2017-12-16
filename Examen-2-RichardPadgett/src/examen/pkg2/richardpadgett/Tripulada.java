@@ -71,7 +71,7 @@ public class Tripulada extends Naves {
     public double[] calcularTiempo() {
         double tida;
         double tvuelta;
-        double[] conjunto=null;
+        double[] conjunto=new double[2];
         double suma = 0;
         for (int i = 0; i < listastronautas.size(); i++) {
            suma+= listastronautas.get(i).getPeso();
